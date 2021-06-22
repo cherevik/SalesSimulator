@@ -82,7 +82,7 @@ class SalesSimulator(object):
 
         return sales_data_frame
 
-    def simulate(self, n_iterations: int = 10) -> pd.DataFrame:
+    def simulate(self, n_iterations: int = 10) -> pd.Series:
         revenue_df = None
         for i in range(0, n_iterations):
             sales = self.single_run()
