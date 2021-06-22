@@ -11,7 +11,7 @@ def weighted_pick(weights, n_picks):
     return np.searchsorted(t, np.random.rand(n_picks) * s)
 
 
-def average_cycle_length(stages: List[Tuple[str, float, int]]):
+def average_cycle_length(stages: List[Tuple[str, float, int, str]]):
     average_length = 0
     total_length = 0
     prob = 1.0
@@ -28,7 +28,7 @@ class SalesSimulator(object):
     success_stages = ['Closed Won']
 
     def __init__(self,
-                 stages: List[Tuple[str, float, int]],
+                 stages: List[Tuple[str, float, int, str]],
                  num_years: int = 3,
                  num_opportunities: int = 300,
                  average_sales_price: float = 100000.0,
