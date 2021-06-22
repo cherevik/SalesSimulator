@@ -37,7 +37,7 @@ remote_opportunities = int(NUM_OPPORTUNITIES * in_person_cycle / remote_cycle)
 
 remote_and_meetingless = [('Discovery Meeting with Initiator', 0.85, 14),
                           ('Discovery Meeting with Champion', 0.95, 5),
-                          ('Meetingless Demo and Offer', 0.95, 7),
+                          ('Meetingless Demo and Offer Discussion', 0.95, 7),
                           ('Proof of Concept', 0.85, 28),
                           ('Meeting to Address Issues from PoC', 0.98, 3),
                           ('Meeting with Gatekeeper', 0.9, 2),
