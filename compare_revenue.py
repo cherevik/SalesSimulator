@@ -55,5 +55,7 @@ revenue['Remote'] = SalesSimulator(stages=remote,
                                    num_opportunities=remote_opportunities).simulate()
 revenue['Remote and Meetingless'] = SalesSimulator(stages=remote_and_meetingless,
                                                    num_opportunities=remote_and_meetingless_opportunities).simulate()
+revenue.to_excel('revenue.xlsx')
+
 revenue.plot()
 plt.show()
