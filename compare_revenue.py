@@ -3,7 +3,7 @@ from matplotlib import pyplot as plt
 
 from sales_simulator import SalesSimulator, average_cycle_length
 
-NUM_OPPORTUNITIES = 1000
+NUM_OPPORTUNITIES = 500
 
 in_person = [('Discovery Meeting with Initiator', 0.8, 14, 'Remote'),
              ('Discovery Meeting with Champion', 0.9, 5, 'Remote'),
@@ -50,12 +50,12 @@ remote_and_meetingless_opportunities = int(NUM_OPPORTUNITIES * in_person_cycle /
 
 revenue = pd.DataFrame()
 revenue['In-Person'] = SalesSimulator(stages=in_person,
-                                      num_opportunities=in_person_opportunities).simulate(20)
+                                      num_opportunities=in_person_opportunities).simulate()
 revenue['Remote'] = SalesSimulator(stages=remote,
-                                   num_opportunities=remote_opportunities).simulate(20)
+                                   num_opportunities=remote_opportunities).simulate()
 revenue['Remote and Meetingless'] = SalesSimulator(stages=remote_and_meetingless,
-                                                   num_opportunities=remote_and_meetingless_opportunities).simulate(20)
-revenue.to_excel('revenue.xlsx')
+                                                   num_opportunities=remote_and_meetingless_opportunities).simulate()
+revenue.to_excel('bookings.xlsx')
 
 revenue.plot()
 plt.show()
